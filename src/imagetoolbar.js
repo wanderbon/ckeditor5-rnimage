@@ -24,7 +24,7 @@ import WidgetToolbarRepository from '@ckeditor/ckeditor5-widget/src/widgettoolba
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageToolbar extends Plugin {
+export default class RNImageToolbar extends Plugin {
 	/**
 	 * @inheritDoc
 	 */

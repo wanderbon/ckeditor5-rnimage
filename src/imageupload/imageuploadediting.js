@@ -13,7 +13,7 @@ import Notification from '@ckeditor/ckeditor5-ui/src/notification/notification';
 import UpcastWriter from '@ckeditor/ckeditor5-engine/src/view/upcastwriter';
 import env from '@ckeditor/ckeditor5-utils/src/env';
 
-import ImageUploadCommand from '../../src/imageupload/imageuploadcommand';
+import RNImageUploadCommand from '../../src/imageupload/imageuploadcommand';
 import { fetchLocalImage, isImageType, isLocalImage } from '../../src/imageupload/utils';
 
 /**
@@ -21,7 +21,7 @@ import { fetchLocalImage, isImageType, isLocalImage } from '../../src/imageuploa
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageUploadEditing extends Plugin {
+export default class RNImageUploadEditing extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
@@ -45,7 +45,7 @@ export default class ImageUploadEditing extends Plugin {
 		} );
 
 		// Register imageUpload command.
-		editor.commands.add( 'imageUpload', new ImageUploadCommand( editor ) );
+		editor.commands.add( 'imageUpload', new RNImageUploadCommand( editor ) );
 
 		// Register upcast converter for uploadId.
 		conversion.for( 'upcast' )

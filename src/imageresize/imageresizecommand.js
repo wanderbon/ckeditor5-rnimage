@@ -15,7 +15,7 @@ import { isImage } from '../image/utils';
  *
  * @extends module:core/command~Command
  */
-export default class ImageResizeCommand extends Command {
+export default class RNImageResizeCommand extends Command {
 	/**
 	 * @inheritDoc
 	 */

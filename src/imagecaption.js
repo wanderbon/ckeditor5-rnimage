@@ -8,7 +8,7 @@
  */
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import ImageCaptionEditing from './imagecaption/imagecaptionediting';
+import RNImageCaptionEditing from './imagecaption/imagecaptionediting';
 
 import '../theme/imagecaption.css';
 
@@ -19,12 +19,12 @@ import '../theme/imagecaption.css';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageCaption extends Plugin {
+export default class RNImageCaption extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get requires() {
-		return [ ImageCaptionEditing ];
+		return [ RNImageCaptionEditing ];
 	}
 
 	/**

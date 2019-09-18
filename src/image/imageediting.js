@@ -8,7 +8,7 @@
  */
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import ImageLoadObserver from './imageloadobserver';
+import RNImageLoadObserver from './imageloadobserver';
 
 import {
 	viewFigureToModel,
@@ -18,7 +18,7 @@ import {
 
 import { toImageWidget } from './utils';
 
-import ImageInsertCommand from './imageinsertcommand';
+import RNImageStyleCommand from './imageinsertcommand';
 
 /**
  * The image engine plugin.
@@ -31,7 +31,7 @@ import ImageInsertCommand from './imageinsertcommand';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageEditing extends Plugin {
+export default class RNImageEditing extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
@@ -42,7 +42,7 @@ export default class ImageEditing extends Plugin {
 		const conversion = editor.conversion;
 
 		// See https://github.com/ckeditor/ckeditor5-image/issues/142.
-		editor.editing.view.addObserver( ImageLoadObserver );
+		editor.editing.view.addObserver( RNImageLoadObserver );
 
 		// Configure schema.
 		schema.register( 'image', {
@@ -107,7 +107,7 @@ export default class ImageEditing extends Plugin {
 			.add( viewFigureToModel() );
 
 		// Register imageUpload command.
-		editor.commands.add( 'imageInsert', new ImageInsertCommand( editor ) );
+		editor.commands.add( 'imageInsert', new RNImageInsertCommand( editor ) );
 	}
 }
 

@@ -19,7 +19,7 @@ import Observer from '@ckeditor/ckeditor5-engine/src/view/observer/observer';
  *
  * @extends module:engine/view/observer/observer~Observer
  */
-export default class ImageLoadObserver extends Observer {
+export default class RNImageLoadObserver extends Observer {
 	constructor( view ) {
 		super( view );
 

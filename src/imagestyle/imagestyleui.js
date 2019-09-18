@@ -19,12 +19,12 @@ import '../../theme/imagestyle.css';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageStyleUI extends Plugin {
+export default class RNImageStyleUI extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get pluginName() {
-		return 'ImageStyleUI';
+		return 'RNImageStyleUI';
 	}
 
 	/**

@@ -15,7 +15,7 @@ import { isImage } from '../image/utils';
  *
  * @extends module:core/command~Command
  */
-export default class ImageTextAlternativeCommand extends Command {
+export default class RNImageTextAlternativeCommand extends Command {
 	/**
 	 * The command value: `false` if there is no `alt` attribute, otherwise the value of the `alt` attribute.
 	 *

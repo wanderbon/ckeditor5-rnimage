@@ -8,8 +8,8 @@
  */
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import ImageStyleEditing from './imagestyle/imagestyleediting';
-import ImageStyleUI from './imagestyle/imagestyleui';
+import RNImageStyleEditing from './imagestyle/imagestyleediting';
+import RNImageStyleUI from './imagestyle/imagestyleui';
 
 /**
  * The image style plugin.
@@ -21,12 +21,12 @@ import ImageStyleUI from './imagestyle/imagestyleui';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageStyle extends Plugin {
+export default class RNImageStyle extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get requires() {
-		return [ ImageStyleEditing, ImageStyleUI ];
+		return [ RNImageStyleEditing, RNImageStyleUI ];
 	}
 
 	/**

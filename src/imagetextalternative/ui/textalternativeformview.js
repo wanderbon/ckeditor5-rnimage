@@ -28,7 +28,7 @@ import '../../../theme/textalternativeform.css';
  *
  * @extends module:ui/view~View
  */
-export default class TextAlternativeFormView extends View {
+export default class RNTextAlternativeFormView extends View {
 	/**
 	 * @inheritDoc
 	 */

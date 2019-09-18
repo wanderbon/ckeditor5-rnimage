@@ -32,7 +32,7 @@ import { insertImage, isImageAllowed } from './utils';
  *
  * @extends module:core/command~Command
  */
-export default class ImageInsertCommand extends Command {
+export default class RNImageInsertCommand extends Command {
 	/**
 	 * @inheritDoc
 	 */

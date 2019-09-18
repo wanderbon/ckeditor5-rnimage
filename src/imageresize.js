@@ -9,7 +9,7 @@
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import WidgetResize from '@ckeditor/ckeditor5-widget/src/widgetresize';
-import ImageResizeCommand from './imageresize/imageresizecommand';
+import RNImageResizeCommand from './imageresize/imageresizecommand';
 
 import '../theme/imageresize.css';
 
@@ -20,7 +20,7 @@ import '../theme/imageresize.css';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageResize extends Plugin {
+export default class RNImageResize extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
@@ -40,7 +40,7 @@ export default class ImageResize extends Plugin {
 	 */
 	init() {
 		const editor = this.editor;
-		const command = new ImageResizeCommand( editor );
+		const command = new RNImageResizeCommand( editor );
 
 		this._registerSchema();
 		this._registerConverters();

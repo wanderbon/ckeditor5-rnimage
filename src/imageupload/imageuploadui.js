@@ -21,7 +21,7 @@ import { isImageType } from './utils';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageUploadUI extends Plugin {
+export default class RNImageUploadUI extends Plugin {
 	/**
 	 * @inheritDoc
 	 */

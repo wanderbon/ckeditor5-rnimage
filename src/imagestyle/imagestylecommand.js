@@ -15,7 +15,7 @@ import { isImage } from '../image/utils';
  *
  * @extends module:core/command~Command
  */
-export default class ImageStyleCommand extends Command {
+export default class RNImageStyleCommand extends Command {
 	/**
 	 * Creates an instance of the image style command. Each command instance is handling one style.
 	 *

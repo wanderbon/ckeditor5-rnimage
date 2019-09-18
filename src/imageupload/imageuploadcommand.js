@@ -39,7 +39,7 @@ import { insertImage, isImageAllowed } from '../image/utils';
  *
  * @extends module:core/command~Command
  */
-export default class ImageUploadCommand extends Command {
+export default class RNImageUploadCommand extends Command {
 	/**
 	 * @inheritDoc
 	 */

@@ -8,7 +8,7 @@
  */
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import ImageStyleCommand from './imagestylecommand';
+import RNImageStyleCommand from './imagestylecommand';
 import { viewToModelStyleAttribute, modelToViewStyleAttribute } from './converters';
 import { normalizeImageStyles } from './utils';
 
@@ -18,12 +18,12 @@ import { normalizeImageStyles } from './utils';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageStyleEditing extends Plugin {
+export default class RNImageStyleEditing extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get pluginName() {
-		return 'ImageStyleEditing';
+		return 'RNImageStyleEditing';
 	}
 
 	/**
@@ -54,7 +54,7 @@ export default class ImageStyleEditing extends Plugin {
 		data.upcastDispatcher.on( 'element:figure', viewToModelStyleAttribute( styles ), { priority: 'low' } );
 
 		// Register imageStyle command.
-		editor.commands.add( 'imageStyle', new ImageStyleCommand( editor, styles ) );
+		editor.commands.add( 'imageStyle', new RNImageStyleCommand( editor, styles ) );
 	}
 }
 

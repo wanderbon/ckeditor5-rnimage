@@ -8,8 +8,8 @@
  */
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import ImageTextAlternativeEditing from './imagetextalternative/imagetextalternativeediting';
-import ImageTextAlternativeUI from './imagetextalternative/imagetextalternativeui';
+import RNImageTextAlternativeEditing from './imagetextalternative/imagetextalternativeediting';
+import RNImageTextAlternativeUI from './imagetextalternative/imagetextalternativeui';
 
 /**
  * The image text alternative plugin.
@@ -22,12 +22,12 @@ import ImageTextAlternativeUI from './imagetextalternative/imagetextalternativeu
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageTextAlternative extends Plugin {
+export default class RNImageTextAlternative extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get requires() {
-		return [ ImageTextAlternativeEditing, ImageTextAlternativeUI ];
+		return [ RNImageTextAlternativeEditing, RNImageTextAlternativeUI ];
 	}
 
 	/**

@@ -8,9 +8,9 @@
  */
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import ImageEditing from '../src/image/imageediting';
+import RNImageEditing from '../src/image/imageediting';
 import Widget from '@ckeditor/ckeditor5-widget/src/widget';
-import ImageTextAlternative from './imagetextalternative';
+import RNImageTextAlternative from './imagetextalternative';
 
 import '../theme/image.css';
 
@@ -29,12 +29,12 @@ import '../theme/image.css';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class Image extends Plugin {
+export default class RNImage extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get requires() {
-		return [ ImageEditing, Widget, ImageTextAlternative ];
+		return [ RNImageEditing, Widget, RNImageTextAlternative ];
 	}
 
 	/**

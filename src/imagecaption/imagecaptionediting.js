@@ -19,7 +19,7 @@ import { captionElementCreator, getCaptionFromImage, matchImageCaption } from '.
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageCaptionEditing extends Plugin {
+export default class RNImageCaptionEditing extends Plugin {
 	/**
 	 * @inheritDoc
 	 */

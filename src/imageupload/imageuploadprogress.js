@@ -24,7 +24,7 @@ import '../../theme/imageuploadloader.css';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageUploadProgress extends Plugin {
+export default class RNImageUploadProgress extends Plugin {
 	/**
 	 * @inheritDoc
 	 */

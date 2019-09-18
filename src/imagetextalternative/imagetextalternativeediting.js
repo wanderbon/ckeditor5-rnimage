@@ -7,7 +7,7 @@
  * @module image/imagetextalternative/imagetextalternativeediting
  */
 
-import ImageTextAlternativeCommand from './imagetextalternativecommand';
+import RNImageTextAlternativeCommand from './imagetextalternativecommand';
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 
 /**
@@ -17,11 +17,11 @@ import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
  *
  * @extends module:core/plugin~Plugin
  */
-export default class ImageTextAlternativeEditing extends Plugin {
+export default class RNImageTextAlternativeEditing extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	init() {
-		this.editor.commands.add( 'imageTextAlternative', new ImageTextAlternativeCommand( this.editor ) );
+		this.editor.commands.add( 'imageTextAlternative', new RNImageTextAlternativeCommand( this.editor ) );
 	}
 }

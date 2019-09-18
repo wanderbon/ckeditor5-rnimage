@@ -18,7 +18,7 @@ import {
 
 import { toImageWidget } from './utils';
 
-import RNImageStyleCommand from './imageinsertcommand';
+import RNImageInsertCommand from './imageinsertcommand';
 
 /**
  * The image engine plugin.

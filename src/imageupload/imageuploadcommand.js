@@ -55,6 +55,7 @@ export default class ImageUploadCommand extends Command {
 	 * @param {File|Array.<File>} options.file The image file or an array of image files to upload.
 	 */
 	execute( options ) {
+		alert('тут начинается выбор файла?');
 		const editor = this.editor;
 		const model = editor.model;
 

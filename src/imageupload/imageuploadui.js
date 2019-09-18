@@ -4,11 +4,13 @@ import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
 
 export default class RNImageUploadUI extends Plugin {
 	componentDidMount() {
-		this.messageListener = document.addEventListener('message', this.addImageToContent);	
+		this.messageListener = document.addEventListener('message', function(data) {
+			alert('message');
+		});	
 	}
 
 	componentWillUnmount() {
-		document.removeEventListener(this.messageListener);
+		// document.removeEventListener(this.messageListener);
 	}
 	
 	addImageToContent() {

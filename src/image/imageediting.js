@@ -45,7 +45,7 @@ export default class RNImageEditing extends Plugin {
 		editor.editing.view.addObserver( RNImageLoadObserver );
 
 		// Configure schema.
-		schema.register( 'image', {
+		schema.register( 'rnimage', {
 			isObject: true,
 			isBlock: true,
 			allowWhere: '$block',
@@ -53,12 +53,12 @@ export default class RNImageEditing extends Plugin {
 		} );
 
 		conversion.for( 'dataDowncast' ).elementToElement( {
-			model: 'image',
+			model: 'rnimage',
 			view: ( modelElement, viewWriter ) => createImageViewElement( viewWriter )
 		} );
 
 		conversion.for( 'editingDowncast' ).elementToElement( {
-			model: 'image',
+			model: 'rnimage',
 			view: ( modelElement, viewWriter ) => toImageWidget( createImageViewElement( viewWriter ), viewWriter, t( 'image widget' ) )
 		} );
 

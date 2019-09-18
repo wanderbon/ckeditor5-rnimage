@@ -33,7 +33,6 @@ export default class RNImageUploadEditing extends Plugin {
 	 * @inheritDoc
 	 */
 	init() {
-		alert('choose image in editing file')
 		const editor = this.editor;
 		const doc = editor.model.document;
 		const schema = editor.model.schema;

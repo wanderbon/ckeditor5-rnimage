@@ -8,7 +8,7 @@
  */
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import FileDialogButtonView from '@ckeditor/ckeditor5-upload/src/ui/filedialogbuttonview';
+import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
 import { isImageType } from './utils';
 
@@ -31,28 +31,26 @@ export default class RNImageUploadUI extends Plugin {
 
 		// Setup `imageUpload` button.
 		editor.ui.componentFactory.add( 'rnimageUpload', locale => {
-			const view = new FileDialogButtonView( locale );
-			const command = editor.commands.get( 'rnimageUpload' );
+			const view = new ButtonView( locale );
 
 			view.set( {
-				acceptedType: 'image/*',
-				allowMultipleFiles: true
+					label: 'Insert image',
+					icon: imageIcon,
+					tooltip: true
 			} );
 
-			view.buttonView.set( {
-				label: t( 'Insert image' ),
-				icon: imageIcon,
-				tooltip: true
-			} );
+			// Callback executed once the image is clicked.
+			view.on( 'execute', () => {
+					const imageUrl = prompt( 'Image URL' );
 
-			view.buttonView.bind( 'isEnabled' ).to( command );
+					editor.model.change( writer => {
+							const imageElement = writer.createElement( 'image', {
+									src: imageUrl
+							} );
 
-			view.on( 'done', ( evt, files ) => {
-				const imagesToUpload = Array.from( files ).filter( isImageType );
-
-				if ( imagesToUpload.length ) {
-					editor.execute( 'rnimageUpload', { file: imagesToUpload } );
-				}
+							// Insert the image in the current selection location.
+							editor.model.insertContent( imageElement, editor.model.document.selection );
+					} );
 			} );
 
 			return view;

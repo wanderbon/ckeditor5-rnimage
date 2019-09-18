@@ -31,7 +31,6 @@ export default class RNImageUploadUI extends Plugin {
 
 		// Setup `imageUpload` button.
 		editor.ui.componentFactory.add( 'rnimageUpload', locale => {
-			return alert('Тут нужно вызвать загрузчик из rn');
 			const view = new FileDialogButtonView( locale );
 			const command = editor.commands.get( 'rnimageUpload' );
 

@@ -47,7 +47,7 @@ export default class RNImageToolbar extends Plugin {
 		const t = editor.t;
 		const widgetToolbarRepository = editor.plugins.get( WidgetToolbarRepository );
 
-		widgetToolbarRepository.register( 'image', {
+		widgetToolbarRepository.register( 'rnimage', {
 			ariaLabel: t( 'Image toolbar' ),
 			items: editor.config.get( 'image.toolbar' ) || [],
 			getRelatedElement: getSelectedImageWidget,

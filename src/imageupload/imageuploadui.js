@@ -2,22 +2,7 @@ import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
 
-export default class RNImageUploadUI extends Plugin {
-	addImageToContent(data) {
-		const editor = this.editor;
-		const messageData = JSON.parse(data);
-		alert(data);
-		if(messageData.imageUrl) {
-			editor.model.change( writer => {
-				const imageElement = writer.createElement('image', {
-						src: messageData.imageUrl
-				} );
-
-				editor.model.insertContent( imageElement, editor.model.document.selection );
-		} );
-		}
-	}
-	
+export default class RNImageUploadUI extends Plugin {	
 	init() {
 		const editor = this.editor;
 
@@ -35,7 +20,19 @@ export default class RNImageUploadUI extends Plugin {
 						event: 'uploadImage'
 					}));
 
-					document.addEventListener('message', this.addImageToContent.bind(this));
+					document.addEventListener('message', function(data) {
+						const messageData = JSON.parse(data);
+
+						if(messageData.imageUrl) {
+							editor.model.change( writer => {
+								const imageElement = writer.createElement('image', {
+										src: messageData.imageUrl
+								} );
+
+								editor.model.insertContent( imageElement, editor.model.document.selection );
+							});
+						}
+					});
 			} );
 
 			return view;

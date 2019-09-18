@@ -66,7 +66,7 @@ export default class RNImageTextAlternativeUI extends Plugin {
 		const editor = this.editor;
 		const t = editor.t;
 
-		editor.ui.componentFactory.add( 'imageTextAlternative', locale => {
+		editor.ui.componentFactory.add( 'rnimageTextAlternative', locale => {
 			const command = editor.commands.get( 'imageTextAlternative' );
 			const view = new ButtonView( locale );
 

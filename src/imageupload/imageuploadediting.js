@@ -40,7 +40,7 @@ export default class RNImageUploadEditing extends Plugin {
 		const fileRepository = editor.plugins.get( FileRepository );
 
 		// Setup schema to allow uploadId and uploadStatus for images.
-		schema.extend( 'image', {
+		schema.extend( 'rnimage', {
 			allowAttributes: [ 'uploadId', 'uploadStatus' ]
 		} );
 

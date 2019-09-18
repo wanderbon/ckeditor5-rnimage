@@ -93,7 +93,7 @@ export default class RNImageResize extends Plugin {
 	 * @private
 	 */
 	_registerSchema() {
-		this.editor.model.schema.extend( 'image', {
+		this.editor.model.schema.extend( 'rnimage', {
 			allowAttributes: 'width'
 		} );
 	}

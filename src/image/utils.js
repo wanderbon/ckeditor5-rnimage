@@ -113,7 +113,7 @@ export function isImageAllowed( model ) {
 function isImageAllowedInParent( selection, schema, model ) {
 	const parent = getInsertImageParent( selection, model );
 
-	return schema.checkChild( parent, 'image' );
+	return schema.checkChild( parent, 'rnimage' );
 }
 
 // Check if selection is on object.

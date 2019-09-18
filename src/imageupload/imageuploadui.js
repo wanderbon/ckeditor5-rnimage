@@ -6,7 +6,7 @@ export default class RNImageUploadUI extends Plugin {
 	addImageToContent(data) {
 		const editor = this.editor;
 		const messageData = JSON.parse(data);
-
+		alert(data);
 		if(messageData.imageUrl) {
 			editor.model.change( writer => {
 				const imageElement = writer.createElement('image', {
@@ -35,7 +35,7 @@ export default class RNImageUploadUI extends Plugin {
 						event: 'uploadImage'
 					}));
 
-					document.addEventListener('message', this.addImageToContent);
+					document.addEventListener('message', this.addImageToContent.bind(this));
 			} );
 
 			return view;

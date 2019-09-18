@@ -11,7 +11,7 @@ export default class RNImageUploadUI extends Plugin {
 		document.removeEventListener(this.messageListener);
 	}
 	
-	addImageToContent = () => {
+	addImageToContent() {
 		alert('message');
 	}
 	

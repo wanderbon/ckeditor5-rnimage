@@ -37,6 +37,6 @@ export default class RNImageUpload extends Plugin {
 	 * @inheritDoc
 	 */
 	static get requires() {
-		return [ RNImageUploadEditing, RNImageUploadUI, RNImageUploadProgress ];
+		return [ RNImageUploadUI, RNImageUploadEditing, RNImageUploadProgress ];
 	}
 }

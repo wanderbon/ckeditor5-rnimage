@@ -108,7 +108,7 @@ export default class RNImageTextAlternativeUI extends Plugin {
 		 *
 		 * @member {module:image/imagetextalternative/ui/textalternativeformview~TextAlternativeFormView}
 		 */
-		this._form = new TextAlternativeFormView( editor.locale );
+		this._form = new RNTextAlternativeFormView( editor.locale );
 
 		// Render the form so its #element is available for clickOutsideHandler.
 		this._form.render();

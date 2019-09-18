@@ -3,10 +3,21 @@ import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
 
 export default class RNImageUploadUI extends Plugin {
+	componentDidMount() {
+		this.messageListener = document.addEventListener('message', this.addImageToContent);	
+	}
+
+	componentWillUnmount() {
+		document.removeEventListener(this.messageListener);
+	}
+	
+	addImageToContent = () => {
+		alert('message');
+	}
+	
 	init() {
 		const editor = this.editor;
 
-		// Setup `imageUpload` button.
 		editor.ui.componentFactory.add( 'rnimageUpload', locale => {
 			const view = new ButtonView( locale );
 
@@ -17,8 +28,6 @@ export default class RNImageUploadUI extends Plugin {
 			} );
 
 			view.on( 'execute', () => {
-					const imageUrl = prompt( 'Image URL' );
-
 					window.ReactNativeWebView.postMessage(JSON.stringify({
 						event: 'uploadImage'
 					}));

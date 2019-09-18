@@ -55,18 +55,19 @@ export default class RNImageUploadCommand extends Command {
 	 * @param {File|Array.<File>} options.file The image file or an array of image files to upload.
 	 */
 	execute( options ) {
-		const editor = this.editor;
-		const model = editor.model;
+		alert('choose image')
+		// const editor = this.editor;
+		// const model = editor.model;
 
-		const fileRepository = editor.plugins.get( FileRepository );
+		// const fileRepository = editor.plugins.get( FileRepository );
 
-		model.change( writer => {
-			const filesToUpload = Array.isArray( options.file ) ? options.file : [ options.file ];
+		// model.change( writer => {
+		// 	const filesToUpload = Array.isArray( options.file ) ? options.file : [ options.file ];
 
-			for ( const file of filesToUpload ) {
-				uploadImage( writer, model, fileRepository, file );
-			}
-		} );
+		// 	for ( const file of filesToUpload ) {
+		// 		uploadImage( writer, model, fileRepository, file );
+		// 	}
+		// } );
 	}
 }
 

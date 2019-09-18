@@ -33,7 +33,7 @@ export default class RNImageUploadUI extends Plugin {
 		editor.ui.componentFactory.add( 'rnimageUpload', locale => {
 			return alert('Тут нужно вызвать загрузчик из rn');
 			const view = new FileDialogButtonView( locale );
-			const command = editor.commands.get( 'imageUpload' );
+			const command = editor.commands.get( 'rnimageUpload' );
 
 			view.set( {
 				acceptedType: 'image/*',
@@ -52,7 +52,7 @@ export default class RNImageUploadUI extends Plugin {
 				const imagesToUpload = Array.from( files ).filter( isImageType );
 
 				if ( imagesToUpload.length ) {
-					editor.execute( 'imageUpload', { file: imagesToUpload } );
+					editor.execute( 'rnimageUpload', { file: imagesToUpload } );
 				}
 			} );
 

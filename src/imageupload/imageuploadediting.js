@@ -45,7 +45,7 @@ export default class RNImageUploadEditing extends Plugin {
 		} );
 
 		// Register imageUpload command.
-		editor.commands.add( 'imageUpload', new RNImageUploadCommand( editor ) );
+		editor.commands.add( 'rnimageUpload', new RNImageUploadCommand( editor ) );
 
 		// Register upcast converter for uploadId.
 		conversion.for( 'upcast' )
@@ -88,7 +88,7 @@ export default class RNImageUploadEditing extends Plugin {
 
 					// Upload images after the selection has changed in order to ensure the command's state is refreshed.
 					editor.model.enqueueChange( 'default', () => {
-						editor.execute( 'imageUpload', { file: images } );
+						editor.execute( 'rnimageUpload', { file: images } );
 					} );
 				}
 			} );

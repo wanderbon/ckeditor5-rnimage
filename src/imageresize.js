@@ -32,7 +32,7 @@ export default class ImageResize extends Plugin {
 	 * @inheritDoc
 	 */
 	static get pluginName() {
-		return 'ImageResize';
+		return 'RNImageResize';
 	}
 
 	/**

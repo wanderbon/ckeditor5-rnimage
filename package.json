@@ -1,5 +1,5 @@
 {
-  "name": "@ckeditor/ckeditor5-image",
+  "name": "ckeditor5-rnimage",
   "version": "14.0.0",
   "description": "Image feature for CKEditor 5.",
   "keywords": [

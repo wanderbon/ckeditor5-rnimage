@@ -4,9 +4,7 @@ import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
 
 export default class RNImageUploadUI extends Plugin {
 	componentDidMount() {
-		this.messageListener = document.addEventListener('message', function(data) {
-			alert('message');
-		});	
+		this.messageListener = null;
 	}
 
 	componentWillUnmount() {
@@ -33,6 +31,14 @@ export default class RNImageUploadUI extends Plugin {
 					window.ReactNativeWebView.postMessage(JSON.stringify({
 						event: 'uploadImage'
 					}));
+
+					document.addEventListener('message', function(data) {
+						alert('document message');
+					});	
+
+					document.addEventListener('message', function(data) {
+						alert('window message');
+					});	
 
 					// editor.model.change( writer => {
 					// 		const imageElement = writer.createElement( 'image', {

@@ -16,27 +16,11 @@ export default class RNImageUploadUI extends Plugin {
 			} );
 
 			view.on( 'execute', () => {
+				if(window.ReactNativeWebView) {
 					window.ReactNativeWebView.postMessage(JSON.stringify({
 						event: 'uploadImage'
 					}));
-
-					// window.addEventListener('message', function(data) { 
-					// 	alert('window data: ' + data);
-					// });
-
-					// document.addEventListener('message', function(data) {
-					// 	const messageData = JSON.parse(data);
-					// 	alert('doucment data: ' + data);
-					// 	if(messageData.imageUrl) {
-					// 		editor.model.change( writer => {
-					// 			const imageElement = writer.createElement('image', {
-					// 					src: messageData.imageUrl
-					// 			} );
-
-					// 			editor.model.insertContent( imageElement, editor.model.document.selection );
-					// 		});
-					// 	}
-					// });
+				}
 			} );
 
 			return view;
